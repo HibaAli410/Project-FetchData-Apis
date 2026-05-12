@@ -1,24 +1,46 @@
-async function getData(){
-    try{
-        let response = await fetch("https://jsonplaceholder.typicode.com/posts");
-        let data = await response.json();
-        console.log(data);
-        data.slice(0,20).forEach((post)=>{
-            let postTitle = post.title;
-            let postBody = post.body;
-            let postUserId = post.userID;
+async function getData() {
+    try {
+        let response = await fetch('https://jsonplaceholder.typicode.com/posts')
+        let data = await response.json()
+        console.log(data)
+        const div = document.getElementById('container')
+        const table = document.createElement('table')
+        const thead = document.createElement('thead')
+        table.appendChild(thead);
+        const headerrow = document.createElement('tr');
+        const headingtitle = document.createElement('th');
+        const headingbody = document.createElement('th');
+        headerrow.appendChild(headingtitle);
+        headerrow.appendChild(headingbody);
+        headingtitle.textContent = "Post Title";
+        headingbody.textContent = "Post Detail";
+        thead.appendChild(headerrow);
+        div.appendChild(table)
+        data.slice(0, 20).forEach(post => {
+            let postTitle = post.title
+            let postBody = post.body
+            let userId = post.userId
+            let postId = post.id
             // console.log("Title of Post is " + post.title);
             // console.log("Body of Post is " + post.body);
             // console.log("UserId of Post is " + post.userId);
-            displayPost()
+            displayPost(table, postTitle, postBody, userId, postId)
         })
-        
+    } catch (error) {
+        console.log('Error in fetching Data:', error)
     }
-    catch(error){
-        console.log("Error in fetching Data:",error);
-    }
-    }
-    getData();
-    function displayPost(userID,postId){
+}
 
-    }
+function displayPost(table, postTitle, postBody, userId, postId) {
+
+
+    const row = document.createElement('tr');
+    const tdtitle = document.createElement('td');
+    const tdbody = document.createElement('td');
+    tdtitle.textContent = postTitle;
+    tdbody.textContent = postBody;
+    row.appendChild(tdtitle);
+    row.appendChild(tdbody);
+    table.appendChild(row);
+}
+getData()
