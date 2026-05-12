@@ -27,7 +27,7 @@ table thead th {
     border-bottom: 10px solid rgb(241, 176, 176);
     font-size: xx-large;
     font-family: 'Times New Roman', Times, serif;
-    color: rgb(4, 21, 118);
+    color: #FEE8E7;
 }
 table td {
    
@@ -41,5 +41,6 @@ table td {
 }
 table td:hover{
     border-bottom: 2px solid rgb(242, 240, 236);
+    color: bisque;
     
 }
