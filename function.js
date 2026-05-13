@@ -37,8 +37,8 @@ function displayPost (table, postTitle, postBody, userId, postId) {
   const tdtitle = document.createElement('td')
   const tdbody = document.createElement('td')
   const link = document.createElement('a');
-  link.setAttribute("href", "");
-  link.setAttribute("target", "_blank");
+  link.setAttribute("href", "post.html/"+userId+"/"+postId);
+  link.setAttribute("target", "post.html");
   
     //td Post title 
   link.textContent = postTitle;
