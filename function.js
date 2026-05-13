@@ -9,11 +9,11 @@ async function getData () {
     table.appendChild(thead)
     const headerrow = document.createElement('tr')
     const headingtitle = document.createElement('th')
-    const headingbody = document.createElement('th')
+    //const headingbody = document.createElement('th')
     headerrow.appendChild(headingtitle)
-    headerrow.appendChild(headingbody)
+    //headerrow.appendChild(headingbody)
     headingtitle.textContent = 'Post Title'
-    headingbody.textContent = 'Post Detail'
+   // headingbody.textContent = 'Post Detail'
     thead.appendChild(headerrow)
     table.appendChild(thead)
     div.appendChild(table)
@@ -36,7 +36,7 @@ function displayPost (table, postTitle, postBody, userId, postId) {
   console.log(postTitle)
   const row = document.createElement('tr')
   const tdtitle = document.createElement('td')
-  const tdbody = document.createElement('td')
+  // const tdbody = document.createElement('td')
   const link = document.createElement('a');
   link.setAttribute("href", "post.html?userId="+userId+"&id="+postId); 
    // ? Query string separator => tells now  URL paramenters starts
@@ -48,11 +48,11 @@ function displayPost (table, postTitle, postBody, userId, postId) {
   tdtitle.appendChild(link);
 
   //td Post body 
-  tdbody.textContent = postBody;
+  //tdbody.textContent = postBody;
 
   //both td Append to row 
   row.appendChild(tdtitle)
-  row.appendChild(tdbody)
+  // row.appendChild(tdbody)
   
   table.appendChild(row)
 }
