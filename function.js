@@ -33,11 +33,12 @@ async function getData () {
 }
 
 function displayPost (table, postTitle, postBody, userId, postId) {
+  console.log(postTitle)
   const row = document.createElement('tr')
   const tdtitle = document.createElement('td')
   const tdbody = document.createElement('td')
   const link = document.createElement('a');
-  link.setAttribute("href", "post.html?&userId="+userId+"&postId="+postId); 
+  link.setAttribute("href", "post.html?userId="+userId+"&id="+postId); 
    // ? Query string separator => tells now  URL paramenters starts
    // & parameter seperator => separates multiple parameters
   link.setAttribute("target", "_blank");
