@@ -1,6 +1,9 @@
 table{
+    width:90%;
+    margin:10% auto;
     justify-content: center;
-    margin: 0px auto ;
+    text-align: justify;
+
     background-color: rgb(245, 173, 173);
 }
 table thead{
@@ -11,10 +14,11 @@ table thead{
 }
 table thead th{
     padding: 2%;
+    color: chocolate;
 }
 table td{
     background-color: rgb(245, 173, 173);
-    color: aliceblue;
+    color: rgb(52, 80, 105);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: large;
     line-height: 30px;
