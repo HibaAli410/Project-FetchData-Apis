@@ -37,8 +37,10 @@ function displayPost (table, postTitle, postBody, userId, postId) {
   const tdtitle = document.createElement('td')
   const tdbody = document.createElement('td')
   const link = document.createElement('a');
-  link.setAttribute("href", "post.html/"+userId+"/"+postId);
-  link.setAttribute("target", "post.html");
+  link.setAttribute("href", "post.html?&userId="+userId+"&postId="+postId); 
+   // ? Query string separator => tells now  URL paramenters starts
+   // & parameter seperator => separates multiple parameters
+  link.setAttribute("target", "_blank");
   
     //td Post title 
   link.textContent = postTitle;
