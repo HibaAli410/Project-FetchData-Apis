@@ -1,0 +1,22 @@
+table{
+    justify-content: center;
+    margin: 0px auto ;
+    background-color: rgb(245, 173, 173);
+}
+table thead{
+    background-color: rgb(245, 173, 173);
+    color: aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: xx-large;
+}
+table thead th{
+    padding: 2%;
+}
+table td{
+    background-color: rgb(245, 173, 173);
+    color: aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+    line-height: 30px;
+    padding: 20px;
+}
