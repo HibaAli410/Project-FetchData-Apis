@@ -11,10 +11,13 @@ async function fetchPost(){
         //console.log(URL);
         const getPost = await fetch(URL);
         const response = await getPost.json();
-        console.log(response);
-        const title = response.title;
-        const body = response.body;
+        response.forEach(data => {
+        console.log(data.title);
+        const title = data.title;
+        const body = data.body;
         displayPost(userId,id,title,body)
+        });
+        
 
     }
     catch(error){
